@@ -24,7 +24,6 @@ import {
 } from '../lib/session.js';
 import { renderPage, redirectWithNotice } from '../views/layout.js';
 import { SettingsPage } from '../views/settings.js';
-import { avatarStyleInfo } from '../lib/avatar.js';
 import { translate } from '../lib/i18n.js';
 
 function returnPath(c: Context<AppEnv>): string {
@@ -59,7 +58,6 @@ function settingsPage(c: Context<AppEnv>, errors: string[] = [], status: 200 | 4
       user={user}
       lastAdmin={lastAdmin}
       errors={errors}
-      avatarStyle={avatarStyleInfo(c.get('config').avatarStyle)}
     />,
   );
 }

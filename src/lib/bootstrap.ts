@@ -1,3 +1,4 @@
+import { AVATAR_STYLE_ID } from './avatar.js';
 import type { Config } from '../config.js';
 import { ConfigError } from '../config.js';
 import type { DB } from '../db/index.js';
@@ -45,7 +46,7 @@ export async function ensureEnvAdmin(db: DB, config: Config, logger: Logger): Pr
     username.usernameCi,
     username.usernameSkel,
     passwordHash,
-    config.avatarStyle,
+    AVATAR_STYLE_ID,
     username.username,
     now,
     now,

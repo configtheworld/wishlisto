@@ -13,7 +13,7 @@ import {
 } from './helpers.js';
 
 test('avatars draw their artwork instead of rendering blank', () => {
-  const svg = renderAvatar('alice', 96, 'initials');
+  const svg = renderAvatar('alice', 96);
   assert.ok((svg.match(/<(path|text|circle|rect)\b/g) ?? []).length >= 1);
 });
 

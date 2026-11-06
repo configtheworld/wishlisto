@@ -1,7 +1,6 @@
 import type { FC } from 'hono/jsx';
 import type { Locale } from '../lib/i18n.js';
 import { translate } from '../lib/i18n.js';
-import type { AvatarStyleInfo } from '../lib/avatar.js';
 import { Avatar, Alert, FormErrors, PageHeader, TextField } from './components.js';
 import { Icon } from './icons.js';
 
@@ -32,8 +31,7 @@ export const SettingsPage: FC<{
   user: SettingsUser;
   lastAdmin: boolean;
   errors: string[];
-  avatarStyle: AvatarStyleInfo;
-}> = ({ locale, csrfToken, user, lastAdmin, errors, avatarStyle }) => {
+}> = ({ locale, csrfToken, user, lastAdmin, errors }) => {
   const t = useT(locale);
   return (
     <>
@@ -135,35 +133,6 @@ export const SettingsPage: FC<{
         </form>
       </section>
 
-      <section class="card settings-card" id="credits">
-        <h2>{t('settings.credits')}</h2>
-        <p class="hint">{t('settings.creditsText')}</p>
-        <dl class="credit-facts">
-          <dt>{t('settings.creditStyle')}</dt>
-          <dd>{avatarStyle.title}</dd>
-          <dt>{t('settings.creditArtist')}</dt>
-          <dd>{avatarStyle.creator}</dd>
-          <dt>{t('settings.creditLicense')}</dt>
-          <dd>
-            <a href={avatarStyle.licenseUrl} target="_blank" rel="noopener noreferrer">
-              {avatarStyle.license} <Icon name="external" size={13} />
-            </a>
-          </dd>
-          <dt>{t('settings.creditSource')}</dt>
-          <dd>
-            <a href={avatarStyle.source} target="_blank" rel="noopener noreferrer">
-              {avatarStyle.source} <Icon name="external" size={13} />
-            </a>
-          </dd>
-        </dl>
-        <p class="hint">
-          {t('settings.creditAttribution', {
-            title: avatarStyle.title,
-            creator: avatarStyle.creator,
-            license: avatarStyle.license,
-          })}
-        </p>
-      </section>
 
       <section class="danger-zone card" id="danger">
         <h2>{t('settings.danger')}</h2>

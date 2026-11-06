@@ -1,6 +1,6 @@
 # Customisation
 
-Most of what visitors see can be changed without touching code: the app name, the tagline, the landing page, the colours, and the avatar style. The admin can also show a short message on the home pages.
+Most of what visitors see can be changed without touching code: the app name, the tagline, the landing page and the colours. The admin can also show a short message on the home pages.
 
 ## site.json
 
@@ -59,12 +59,6 @@ Admins can show one short message above the content on the home and lists pages.
 > Only 4 days left to Christmas! 🎄
 
 The message is stored in the database rather than in `site.json`, so it can be changed without a restart. It is shown in the language the admin writes it in.
-
-## Avatars
-
-Every user's avatar is drawn on the server from their username, using one DiceBear style chosen with `AVATAR_STYLE` (default `initials`). Users cannot change it. The style list is in [Configuration](configuration.md).
-
-Each DiceBear style has its own licence. Some are CC0 and some are CC BY 4.0, which requires attribution. **Settings shows the title, artist, licence, source and an attribution sentence for the style your instance uses.** Do not remove that section: it carries the attribution that the CC BY licence requires.
 
 ## Languages
 

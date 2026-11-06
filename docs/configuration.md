@@ -39,11 +39,7 @@ Setting `ADMIN_USERNAME` and `ADMIN_PASSWORD` is optional: without them, the fir
 
 ## Appearance
 
-| Variable | Default | Description |
-| --- | --- | --- |
-| `AVATAR_STYLE` | `initials` | The DiceBear style used for every user's avatar. One of the 31 ids listed in `src/lib/avatar-ids.ts`, for example `initials`, `adventurer` or `thumbs`. Settings shows the chosen style's licence and attribution. |
-
-Colours, the app name, and the landing page are set in `site.json`, not here. See [Customisation](customization.md).
+The app name, the landing page and the colours are set in `site.json`, not here. See [Customisation](customization.md).
 
 ## Docker Compose only
 
@@ -63,7 +59,6 @@ TRUST_PROXY=true
 OPEN_SIGNUP=false
 MAX_UPLOAD_MB=8
 LINK_PREVIEW_ENABLED=true
-AVATAR_STYLE=initials
 ```
 
 Set `OPEN_SIGNUP=false` to keep signups closed from the first start. The admin can open them later from the **Admin** page.

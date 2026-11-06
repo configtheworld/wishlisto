@@ -73,7 +73,7 @@ test('avatars are rendered locally, allowlisted and sandboxed', async (t) => {
   assert.equal(response.status, 200);
   assert.match(response.headers.get('content-type') ?? '', /image\/svg\+xml/);
   assert.match(response.headers.get('content-security-policy') ?? '', /default-src 'none'.*sandbox/);
-  assert.match(response.headers.get('cache-control') ?? '', /max-age=86400/);
+  assert.match(response.headers.get('cache-control') ?? '', /immutable/);
   const svg = await response.text();
   assert.match(svg, /^<svg/);
   assert.match(svg, /width="64"/);

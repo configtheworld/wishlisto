@@ -11,7 +11,7 @@ Wishlisto is one Node.js process with one SQLite database. It is deliberately sm
 | Browser code | two small same-origin ES modules and one stylesheet | `src/public/` |
 | Database | SQLite via `better-sqlite3`, WAL mode | `src/db/` |
 | Images | `sharp`: decode, downscale, re-encode to WebP, strip metadata | `src/lib/images.ts` |
-| Avatars | DiceBear, rendered on the server and sanitised | `src/lib/avatar.ts` |
+| Avatars | DiceBear Identicon, rendered on the server and sanitised | `src/lib/avatar.ts` |
 | Passwords | Argon2id (`@node-rs/argon2`) | `src/lib/password.ts` |
 | Validation | Zod, at every boundary | `src/lib/validation.ts` |
 | Link previews | SSRF-hardened fetch of title and description | `src/lib/preview.ts` |

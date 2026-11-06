@@ -390,14 +390,7 @@
     "dangerSubmit": "Mein Konto löschen",
     "dangerConfirm": "Dein Konto und alles darin löschen? Das kann nicht rückgängig gemacht werden.",
     "lastAdmin": "Der einzige Admin kann sein Konto nicht löschen. Admin-Rechte übertragen ist noch nicht verfügbar.",
-    "lastAdminTitle": "Admin-Konto geschützt",
-    "credits": "Avatar-Kunst",
-    "creditsText": "Avatare werden lokal mit DiceBear gezeichnet. Keine Anfrage verlässt diesen Server.",
-    "creditStyle": "Stil",
-    "creditArtist": "Urheber*in",
-    "creditLicense": "Lizenz",
-    "creditSource": "Quelle",
-    "creditAttribution": "Avatare nutzen den Stil {title} von {creator}, lizenziert unter {license}. Sie werden auf diesem Server gezeichnet, es gehen also keine Anfragen an DiceBear."
+    "lastAdminTitle": "Admin-Konto geschützt"
   },
   "notice": {
     "listCreated": "Liste erstellt. Wie aufregend!",

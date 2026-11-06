@@ -51,7 +51,7 @@ Out of scope:
 - **Usernames:** Unicode NFKC normalization, case-insensitive uniqueness, and a partial UTS#39-style confusable skeleton. This is heuristic, not a complete confusable table.
 - **Admin:** exactly one admin, enforced by a partial unique index. The admin account cannot be deleted while it is the last admin. `ADMIN_USERNAME`/`ADMIN_PASSWORD` only apply when the instance has zero users.
 - **Uploads:** JPEG/PNG/WebP/GIF magic bytes only, SVG rejected. Images are decoded, downscaled, re-encoded to WebP, and stripped of metadata by sharp. Served same-origin through an authenticated route with `nosniff` and a sandboxed CSP.
-- **Avatars:** generated locally from the DiceBear style chosen per instance (`AVATAR_STYLE`), seeded by username. Settings shows that style's licence and attribution. The generated SVG is sanitized and served with `default-src 'none'; sandbox`.
+- **Avatars:** generated locally with DiceBear's Identicon style, seeded by username. The generated SVG is sanitized and served with `default-src 'none'; sandbox`.
 - **Groups and sharing:** every group and list action checks membership or ownership on the server. Only list owners can share, unshare, or enable public links. Group members get read-only access.
 - **Public links:** tokens are 24 random bytes (base64url). Public pages are `noindex`, hide the owner's username, and serve only the token's own list media; other media returns 404.
 - **Admin:** admin routes require the admin flag. Admins cannot reset another admin's or their own password. Temporary passwords force a change on next login, and the target's sessions are revoked. Admins have no route to view lists, wishes, or claims.

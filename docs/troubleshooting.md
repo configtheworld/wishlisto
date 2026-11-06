@@ -41,10 +41,6 @@ This is intentional in several cases. Previews read only the page title and desc
 
 It appears only on the home and lists pages, only when it is switched on, and only when the text is not empty. Check **Admin → Campaign bar**.
 
-## Avatars look wrong after a change
-
-`AVATAR_STYLE` applies to every avatar on the next page load. Browsers may keep old images for up to a day; a hard refresh shows the new style.
-
 ## Healthcheck is unhealthy
 
 Run `docker compose exec wishlisto node -e "fetch('http://127.0.0.1:8099/healthz').then(r=>r.text()).then(console.log)"`. If that fails, the server is not listening, so read the logs. If it succeeds but Docker still reports unhealthy, check that `PORT` in `.env` is `8099`, the port the health check uses.

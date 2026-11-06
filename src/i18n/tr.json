@@ -390,14 +390,7 @@
     "dangerSubmit": "Hesabımı sil",
     "dangerConfirm": "Hesabın ve içindeki her şey silinsin mi? Bu geri alınamaz.",
     "lastAdmin": "Tek yönetici hesabını silemez. Yöneticilik devri henüz mevcut değil.",
-    "lastAdminTitle": "Yönetici hesabı korunuyor",
-    "credits": "Avatar sanatı",
-    "creditsText": "Avatarlar DiceBear ile yerel olarak çizilir. Bu sunucudan hiçbir istek dışarı çıkmaz.",
-    "creditStyle": "Stil",
-    "creditArtist": "Sanatçı",
-    "creditLicense": "Lisans",
-    "creditSource": "Kaynak",
-    "creditAttribution": "Avatarlar {creator} tarafından hazırlanan {title} stilini kullanır, {license} lisansı altındadır. Bu sunucuda çizilir, DiceBear’a istek gönderilmez."
+    "lastAdminTitle": "Yönetici hesabı korunuyor"
   },
   "notice": {
     "listCreated": "Liste oluşturuldu. Ne heyecanlı!",

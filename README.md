@@ -9,7 +9,7 @@ A small, self-hosted wishlist app for the people you love. Keep private lists, s
 - **Groups.** One invite link per group. Share any of your lists with the group; members can see them and claim wishes.
 - **Claims with control.** Claim a wish as a surprise, as "taken" without a name, or visibly. You can change or release the claim at any time.
 - **Accounts without email.** A username, a password, and a one-time recovery code.
-- **Your instance, your look.** Change the app name, text, colours and avatar style. See [Customisation](docs/customization.md).
+- **Your instance, your look.** Change the app name, text and colours. See [Customisation](docs/customization.md).
 - **Built for phones and desktops.** Responsive layout, dark mode, and English, German and Turkish.
 - **Built to be self-hosted.** One container, one SQLite database, one data folder. No trackers, no CDNs, no external fonts.
 
@@ -73,4 +73,4 @@ Bug reports, documentation fixes, translations and focused pull requests are wel
 
 ## Third-party software
 
-Avatars are drawn with [DiceBear](https://www.dicebear.com). Each style has its own licence, and some styles require attribution. The style your instance uses, with its licence and credit, is shown in the Settings page of the app. Keep that credit in place.
+Avatars are drawn with DiceBear's Identicon style, which is released under CC0 1.0.

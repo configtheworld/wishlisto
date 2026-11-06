@@ -12,7 +12,7 @@ import type { AppEnv } from '../src/types.js';
 import { hashSessionToken, SESSION_COOKIE } from '../src/lib/session.js';
 import { hashPassword } from '../src/lib/password.js';
 import { validateUsername } from '../src/lib/username.js';
-import { DEFAULT_AVATAR_STYLE } from '../src/lib/avatar-ids.js';
+import { AVATAR_STYLE_ID } from '../src/lib/avatar.js';
 import { randomId } from '../src/lib/ids.js';
 
 let ipCounter = 0;
@@ -189,7 +189,7 @@ export async function createUser(
       validated.usernameCi,
       validated.usernameSkel,
       await hashPassword(password),
-      DEFAULT_AVATAR_STYLE,
+      AVATAR_STYLE_ID,
       validated.username,
       isAdmin ? 1 : 0,
       now,

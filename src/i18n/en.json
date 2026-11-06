@@ -390,14 +390,7 @@
     "dangerSubmit": "Delete my account",
     "dangerConfirm": "Delete your account and everything in it? This can't be undone.",
     "lastAdmin": "The only admin can't delete their account. Transferring admin isn't available yet.",
-    "lastAdminTitle": "Admin account protected",
-    "credits": "Avatar art",
-    "creditsText": "Avatars are drawn locally with DiceBear. No requests leave this server.",
-    "creditStyle": "Style",
-    "creditArtist": "Artist",
-    "creditLicense": "Licence",
-    "creditSource": "Source",
-    "creditAttribution": "Avatars use the {title} style by {creator}, licensed under {license}. They are drawn on this server, so no requests go to DiceBear."
+    "lastAdminTitle": "Admin account protected"
   },
   "notice": {
     "listCreated": "List created. So exciting!",

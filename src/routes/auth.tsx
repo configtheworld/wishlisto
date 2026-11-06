@@ -30,7 +30,7 @@ import {
   verifyRecoveryCode,
 } from '../lib/recovery.js';
 import { normalizeUsernameKey, validateUsername, isValidAvatarSeed } from '../lib/username.js';
-import { parseAvatarSize, renderAvatar } from '../lib/avatar.js';
+import { AVATAR_STYLE_ID, parseAvatarSize, renderAvatar } from '../lib/avatar.js';
 import {
   clearSessionCookie,
   createSession,
@@ -300,7 +300,7 @@ export function registerAuthRoutes(app: Hono<AppEnv>): void {
         username.usernameCi,
         username.usernameSkel,
         await hashPassword(parsed.data.password),
-        c.get('config').avatarStyle,
+        AVATAR_STYLE_ID,
         username.username,
         locale,
         await hashRecoveryCode(recoveryCode),
@@ -393,7 +393,7 @@ export function registerAuthRoutes(app: Hono<AppEnv>): void {
         username.usernameCi,
         username.usernameSkel,
         await hashPassword(parsed.data.password),
-        c.get('config').avatarStyle,
+        AVATAR_STYLE_ID,
         username.username,
         locale,
         await hashRecoveryCode(recoveryCode),
@@ -543,11 +543,10 @@ export function registerAuthRoutes(app: Hono<AppEnv>): void {
       c.status(400);
       return c.text('Invalid avatar parameters');
     }
-    const svg = renderAvatar(seed, size, c.get('config').avatarStyle);
+    const svg = renderAvatar(seed, size);
     c.header('Content-Type', 'image/svg+xml; charset=utf-8');
     c.header('Content-Security-Policy', "default-src 'none'; style-src 'unsafe-inline'; sandbox");
-    // Not immutable: the admin can change AVATAR_STYLE, and the same URL then renders differently.
-    c.header('Cache-Control', 'public, max-age=86400');
+    c.header('Cache-Control', 'public, max-age=31536000, immutable');
     c.header('Cross-Origin-Resource-Policy', 'same-origin');
     c.header('Content-Disposition', 'inline');
     return c.body(svg);

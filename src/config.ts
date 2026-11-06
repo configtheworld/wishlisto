@@ -1,7 +1,5 @@
 import path from 'node:path';
 import { z } from 'zod';
-import { AVATAR_STYLE_IDS, DEFAULT_AVATAR_STYLE } from './lib/avatar-ids.js';
-import type { AvatarStyleId } from './lib/avatar-ids.js';
 
 const boolish = z
   .union([z.boolean(), z.enum(['true', 'false', '1', '0', 'yes', 'no'])])
@@ -24,7 +22,6 @@ const envSchema = z.object({
   MAX_UPLOAD_MB: z.coerce.number().int().min(1).max(25).default(8),
   LOG_LEVEL: z.enum(['debug', 'info', 'warn', 'error']).default('info'),
   SITE_CONFIG: z.string().min(1).default('site.json'),
-  AVATAR_STYLE: z.enum(AVATAR_STYLE_IDS).default(DEFAULT_AVATAR_STYLE),
 });
 
 export type LogLevel = 'debug' | 'info' | 'warn' | 'error';
@@ -48,7 +45,6 @@ export interface Config {
   maxUploadBytes: number;
   logLevel: LogLevel;
   siteConfigPath: string;
-  avatarStyle: AvatarStyleId;
 }
 
 export class ConfigError extends Error {}
@@ -92,6 +88,5 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env): Config {
     maxUploadBytes: v.MAX_UPLOAD_MB * 1024 * 1024,
     logLevel: v.LOG_LEVEL,
     siteConfigPath: path.resolve(v.SITE_CONFIG),
-    avatarStyle: v.AVATAR_STYLE,
   };
 }

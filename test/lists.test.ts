@@ -584,7 +584,6 @@ test('settings show the fixed avatar, password, recovery code, language and dele
 
   const settings = await aliceClient.page('/settings');
   assert.equal(settings.status, 200);
-  assert.match(settings.html, /Initials/);
   assert.doesNotMatch(settings.html, /data-avatar-preview|avatar-editor/);
   assert.equal((await aliceClient.post('/settings/avatar', { style: 'bottts', seed: 'x' })).status, 404);
   assert.equal(

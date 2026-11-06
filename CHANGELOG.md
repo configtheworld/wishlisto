@@ -10,7 +10,7 @@ All notable changes to this project are documented here. The project follows
 - Link previews that read only the page title and description, with SSRF protections; "Fill from link" in the item form.
 - Admin page: signup toggle, user list, temporary password reset, and a campaign bar for the home pages.
 - Turkish, German and English interface.
-- Configurable branding and colours in `site.json`; `AVATAR_STYLE` picks the DiceBear avatar style, with licence credits in Settings.
+- Configurable app name, copy and colours in `site.json`. Avatars use DiceBear's Identicon style.
 - Continuous integration (typecheck, tests, build, dependency audit, container build) and weekly dependency updates.
 
 ### Changed
