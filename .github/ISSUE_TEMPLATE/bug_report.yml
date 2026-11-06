@@ -1,0 +1,31 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open ... 2. Click ... 3. ..."
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser and device
+      options: [Desktop browser, Phone browser, Installed app, Other]
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log lines
+      description: Remove any passwords, tokens, usernames or domains before pasting.
+      render: text

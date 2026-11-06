@@ -1,0 +1,47 @@
+# Wishlisto with Docker Compose. Copy .env.example to .env and edit it first.
+#
+#   Build from source:      docker compose up -d --build
+#   Use a published image:  set WISHLISTO_IMAGE in .env, then
+#                           docker compose pull && docker compose up -d
+#
+# Behind Traefik on an external "edge" network, add the override file:
+#   docker compose -f docker-compose.yml -f deploy/traefik/compose.override.yml up -d
+services:
+  wishlisto:
+    image: ${WISHLISTO_IMAGE:-wishlisto:local}
+    build:
+      context: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    # These paths are fixed inside the container. They override the values in .env,
+    # which are written for running on your machine.
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: "8099"
+      DATA_DIR: /data
+      PUBLIC_DIR: /app/dist/public
+    ports:
+      # Reachable from this machine only. Change to "8099:8099" to expose it on your network,
+      # but a reverse proxy with HTTPS is strongly recommended (see docs/reverse-proxy.md).
+      - "127.0.0.1:8099:8099"
+    volumes:
+      - wishlisto-data:/data
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "fetch('http://127.0.0.1:8099/healthz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+
+volumes:
+  wishlisto-data:

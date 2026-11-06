@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Wishlisto">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd7e6"/>
+      <stop offset="1" stop-color="#e2e0ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#g)"/>
+  <path d="M32 52C20 44 13 38 13 30c0-6 4-10 10-10 4 0 7 2 9 5 2-3 5-5 9-5 6 0 10 4 10 10 0 8-7 14-19 22Z" fill="#d95f8d"/>
+  <path d="m48 12 1.8 4.7L54.5 18l-4.7 1.8L48 24.5l-1.8-4.7L41.5 18l4.7-1.3Z" fill="#f0b84f"/>
+</svg>

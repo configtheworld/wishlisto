@@ -1,0 +1,40 @@
+# Traefik dynamic configuration for wishlist.example.com
+#
+# Load this file from Traefik's static configuration, e.g.:
+#   providers:
+#     file:
+#       directory: /etc/traefik/dynamic
+#       watch: true
+#
+# Both Traefik and the wishlisto container must share the external "edge"
+# Docker network so the service name resolves. No Authelia middleware is used.
+
+http:
+  routers:
+    wishlisto:
+      rule: Host(`wishlist.example.com`)
+      entryPoints:
+        - websecure
+      service: wishlisto
+      tls:
+        certResolver: letsencrypt
+
+    wishlisto-http:
+      rule: Host(`wishlist.example.com`)
+      entryPoints:
+        - web
+      middlewares:
+        - wishlisto-https
+      service: wishlisto
+
+  middlewares:
+    wishlisto-https:
+      redirectScheme:
+        scheme: https
+        permanent: true
+
+  services:
+    wishlisto:
+      loadBalancer:
+        servers:
+          - url: http://wishlisto:8099

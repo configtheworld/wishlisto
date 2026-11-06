@@ -1,0 +1,12 @@
+# Adds the container to the external "edge" network that Traefik uses.
+# Create it once: docker network create edge
+# Then use: docker compose -f docker-compose.yml -f deploy/traefik/compose.override.yml up -d
+services:
+  wishlisto:
+    ports: !reset []
+    networks:
+      - edge
+
+networks:
+  edge:
+    external: true

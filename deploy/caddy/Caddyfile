@@ -1,0 +1,12 @@
+# Caddy reverse proxy example.
+# Set TRUST_PROXY=true in .env so rate limiting uses the real client IP.
+
+wishlist.example.com {
+	encode zstd gzip
+	request_body {
+		max_size 12MB
+	}
+	reverse_proxy 127.0.0.1:8099 {
+		header_up X-Real-IP {remote_host}
+	}
+}

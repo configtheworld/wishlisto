@@ -1,0 +1,127 @@
+{
+  "appName": "Wishlisto",
+  "tagline": {
+    "en": "Little wishlists for the people you love.",
+    "de": "Kleine Wunschlisten für die Menschen, die du liebst.",
+    "tr": "Sevdiklerin için küçük dilek listeleri."
+  },
+  "landing": {
+    "title": {
+      "en": "Plan gifts together, without spoiling the surprise.",
+      "de": "Geschenke gemeinsam planen, ohne die Überraschung zu verderben.",
+      "tr": "Hediyeleri birlikte planla, sürprizi bozmadan."
+    },
+    "intro": {
+      "en": "Wishlisto is a small, self-hosted wishlist app. Keep lists private, share them with your family or friends in a group, or send a secret link. Someone can claim a gift so nobody buys it twice, and you decide whether you find out who.",
+      "de": "Wishlisto ist eine kleine, selbst betriebene Wunschlisten-App. Halte Listen privat, teile sie in einer Gruppe mit Familie oder Freund*innen oder schicke einen geheimen Link. Andere können ein Geschenk reservieren, damit es niemand doppelt kauft, und du entscheidest, ob du erfährst, wer es ist.",
+      "tr": "Wishlisto, kendi sunucunda çalıştırabileceğin küçük bir dilek listesi uygulaması. Listelerini özel tut, bir grupta ailenle ya da arkadaşlarınla paylaş ya da gizli bir bağlantı gönder. Biri bir hediyeyi üstlenebilir, böylece kimse aynısını iki kez almaz; kimin olduğunu öğrenip öğrenmeyeceğine sen karar verirsin."
+    },
+    "features": [
+      {
+        "icon": "lock",
+        "title": {
+          "en": "Private by default",
+          "de": "Standardmäßig privat",
+          "tr": "Varsayılan olarak özel"
+        },
+        "text": {
+          "en": "Your lists stay yours. Nothing is shared until you pick a group or a link.",
+          "de": "Deine Listen gehören dir. Nichts wird geteilt, bis du eine Gruppe oder einen Link wählst.",
+          "tr": "Listelerin sana ait. Bir grup ya da bağlantı seçmediğin sürece hiçbir şey paylaşılmaz."
+        }
+      },
+      {
+        "icon": "users",
+        "title": {
+          "en": "Share with groups",
+          "de": "Mit Gruppen teilen",
+          "tr": "Gruplarla paylaş"
+        },
+        "text": {
+          "en": "Invite family or friends with one link, then share a list with the whole group.",
+          "de": "Lade Familie oder Freund*innen mit einem Link ein und teile eine Liste mit der ganzen Gruppe.",
+          "tr": "Ailenizi veya arkadaşlarınızı tek bir bağlantıyla davet edin, sonra bir listeyi tüm grupla paylaşın."
+        }
+      },
+      {
+        "icon": "gift",
+        "title": {
+          "en": "Claim without spoiling",
+          "de": "Reservieren ohne Spoiler",
+          "tr": "Sürprizi bozmadan üstlen"
+        },
+        "text": {
+          "en": "Reserve a gift and choose what the owner sees: nothing, that it is taken, or your name.",
+          "de": "Reserviere ein Geschenk und wähle, was die Besitzer*in sieht: nichts, dass es vergeben ist, oder deinen Namen.",
+          "tr": "Bir hediyeyi üstlen ve sahibinin neyi göreceğini seç: hiçbir şey, üstlenildiği bilgisi ya da adın."
+        }
+      }
+    ]
+  },
+  "colors": {
+    "light": {
+      "background": "#faf7fc",
+      "backgroundAccent": "#f3edf8",
+      "surface": "#ffffff",
+      "surfaceSoft": "#fdfaff",
+      "surfaceStrong": "#f1e8f5",
+      "text": "#2e2333",
+      "textSoft": "#67576e",
+      "textFaint": "#8f7f96",
+      "line": "#e9dced",
+      "lineStrong": "#d5c0da",
+      "accent": "#a63d78",
+      "accentStrong": "#86255c",
+      "accentSoft": "#f8e2ef",
+      "accentInk": "#6b173f",
+      "secondary": "#7c5bd6",
+      "secondarySoft": "#ebe5fb",
+      "success": "#2f745c",
+      "successSoft": "#e2f5ec",
+      "danger": "#b53745",
+      "dangerSoft": "#ffe6e9",
+      "star": "#efb24b",
+      "avatarBlob": "#f4e2ee",
+      "tone0": "#f6cfe0",
+      "tone1": "#f7d8d4",
+      "tone2": "#f2d3e8",
+      "tone3": "#e2d6f7",
+      "tone4": "#d8d3f4",
+      "tone5": "#ecd0e4",
+      "tone6": "#f3d9cd",
+      "tone7": "#ddd4f0"
+    },
+    "dark": {
+      "background": "#16121a",
+      "backgroundAccent": "#1d1721",
+      "surface": "#221b27",
+      "surfaceSoft": "#271f2c",
+      "surfaceStrong": "#30253a",
+      "text": "#f3eaf5",
+      "textSoft": "#c9b8cf",
+      "textFaint": "#a690ae",
+      "line": "#392c40",
+      "lineStrong": "#55405f",
+      "accent": "#ec86b8",
+      "accentStrong": "#ffadd2",
+      "accentSoft": "#422635",
+      "accentInk": "#ffd6e8",
+      "secondary": "#b3a2ff",
+      "secondarySoft": "#302a4d",
+      "success": "#8bd6b8",
+      "successSoft": "#1f3a31",
+      "danger": "#ff9ca5",
+      "dangerSoft": "#412328",
+      "star": "#f3c76f",
+      "avatarBlob": "#f3e4ee",
+      "tone0": "#4a2939",
+      "tone1": "#4a3030",
+      "tone2": "#452b41",
+      "tone3": "#322a4d",
+      "tone4": "#2b2a4a",
+      "tone5": "#3d2740",
+      "tone6": "#43302a",
+      "tone7": "#302c47"
+    }
+  }
+}
